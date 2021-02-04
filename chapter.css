@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Avenir-Font" ;
+}
+body{
+    background-image: url(assets/assets/mobile/intro_bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header{
+    margin: 30px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    width: 8%;
+}
+li{
+    display: inline;
+    margin: 10px;
+}
+.icons> li > a , .symbol > li > a{
+    color: white;
+    text-decoration: none;
+}
+span{
+    position: absolute;
+    top: 50%;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    left: .5%;
+    z-index: 1;
+}
+span:nth-of-type(2){
+    left: 98%;
+    text-align: right;
+}
+section{
+    display: flex;
+    justify-content: left;
+    overflow-x: auto;
+}
+section::-webkit-scrollbar{
+    visibility: hidden;
+}
+.slideImg{
+    height: 500px;
+    position: relative;
+    left: 0;
+    margin: 10px 20px;
+    transition: 0.5s;
+}
+.slideImg img{
+    height: 500px;
+    width: 320px;
+}
+.slideImg h1{
+    position: absolute;
+    top: 78%;
+    left: 6%;
+    border-bottom: 2px solid white;
+    width: 85%;
+    color: white;
+}
+.slideImg h3{
+    position: absolute;
+    top: 86%;
+    left: 5%;
+    color: white;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 481px){
+    .logo{
+        width: 15%;
+        margin: -20px -13px;
+    }
+    .symbol{
+        display: flex;
+        margin: -25px -24px;
+    }
+    .icons{
+        margin: 2px -84px 0px -63px;
+    }
+    li{
+        margin: 5px;
+    }
+    span:nth-of-type(2) {
+        left: 91%;
+    }
+    .slideImg img{
+        height: 371px;
+        margin-left: -20px;
+    }
+    .slideImg h1 {
+        top: 52%;
+        left: -2%;
+    }
+    .slideImg h3 {
+        position: absolute;
+        top: 60%;
+        left: -2%;
+    }
+
+}
+
+/* For Teblets Screen  */
+@media only screen and (min-width: 482px) and (max-width: 768px){
+    .logo{
+        width: 20%;
+    }
+    .symbol{
+        display: flex;
+        margin: -4px -24px;
+    }
+    .icons{
+        margin: 47px -84px 0px -63px;
+    }
+    li{
+        display: inline;
+        margin: 11px;
+    }
+}

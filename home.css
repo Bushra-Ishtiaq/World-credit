@@ -1,0 +1,370 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Avenir-Font" ;
+}
+body{
+    background-image: url(assets/assets/mobile/intro_bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    margin: 20px 50px;
+}
+.logo{
+    width: 5%;
+    margin: 30px 0px;
+}
+
+.nav-text p, .nav-text h1{
+    text-align: center;
+    margin-left: 200px;
+}
+li{
+    display: inline;
+    margin: 10px;
+}
+.icons a{
+    color: white;
+    text-decoration: none;
+}
+
+/* responsive for navigation bar  */
+/* for Mobile Screern  */
+
+@media only screen and (min-width: 320px) and (max-width: 481px){
+   header{
+    display: inline;
+   }
+    .logo{
+        width: 14%;
+        margin: -12px 5px;
+    }
+    .nav-text{
+        text-align: center;
+        font-size: 8px;
+        margin-left: -163px;
+        margin-top: 30px;
+    }
+    .icons{
+        margin-left: 188px;
+    margin-top: -67px
+    }
+    .chapters{
+        display: none;
+    }
+}
+
+/* For Teblets Screen  */
+@media only screen and (min-width: 481px) and (max-width: 768px){
+    header{
+        display: inline;
+       }
+        .logo{
+            width: 14%;
+            margin: -12px 5px;
+        }
+        .nav-text{
+            text-align: center;
+            font-size: 8px;
+            margin-left: -163px;
+            margin-top: 30px;
+        }
+        .icons{
+            margin-left: 337px;
+            margin-top: -67px
+        }
+        .chapters{
+            display: none;
+        }
+ 
+}
+
+/* For small laptop Screen  */
+@media only screen and (min-width: 769px) and (max-width: 998px){
+  .nav-text{
+    margin-left: -197px;
+  }
+  .icons{
+    margin-left: -36px;
+    margin-top: -13px;
+  }
+ 
+}
+
+/* Styling for Cards  */
+.cards{
+    display: flex;
+    flex-direction: row;
+}
+.hvrbox {
+	position: relative;
+}
+.hvrbox img {
+    max-width: 80%;
+    height: 80vh;
+    margin: 40px;
+}
+.hvrbox .hvrbox-layer_top {
+    opacity: 0;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    right: 0;
+    /* bottom: 90px; */
+    width: 80%;
+    height: 86%;
+	background: rgba(0, 0, 0, 0.6);
+	color: #fff;
+	/* padding: 15px; */
+	/* -moz-transition: all 0.4s ease-in-out 0s;
+	-webkit-transition: all 0.4s ease-in-out 0s;
+	-ms-transition: all 0.4s ease-in-out 0s;
+	transition: all 0.4s ease-in-out 0s; */
+}
+.hvrbox:hover .hvrbox-layer_top,
+.hvrbox.active .hvrbox-layer_top {
+    opacity: 1;
+}
+.hvrbox .hvrbox-text {
+    font-size: 53px;
+    border-bottom: 2px solid white;
+    width: 70%;
+	display: inline-block;
+	position: absolute;
+	top: 12%;
+    left: 10%;
+	/* -moz-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%); */
+}
+.hvrbox .hvrbox-text2 {
+    font-size: 33px;
+    width: 70%;
+	display: inline-block;
+	position: absolute;
+	top: 30%;
+    left: 45%;
+	-moz-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+.hvrbox .hvrbox-button {
+    font-size: 13px;
+	display: inline-block;
+    position: absolute;
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    padding: 10px 40px;
+	top: 40%;
+    left: 28%;
+	-moz-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+.hvrbox .hvr-text {
+    font-size: 53px;
+    color: white;
+    border-bottom: 2px solid white;
+    width: 70%;
+	display: inline-block;
+	position: absolute;
+	top: 72%;
+    left: 12%;
+}
+.hvrbox .hvr-desp {
+    font-size: 33px;
+    color: white;
+	display: inline-block;
+	position: absolute;
+	top: 83%;
+    left: 12%;
+}
+.hvrbox .hvrbox-text_mobile {
+	font-size: 15px;
+	border-top: 1px solid rgb(179, 179, 179); /* for old browsers */
+	border-top: 1px solid rgba(179, 179, 179, 0.7);
+	margin-top: 5px;
+	padding-top: 2px;
+	display: none;
+}
+.hvrbox.active .hvrbox-text_mobile {
+	display: block;
+}
+
+.hvrbox:hover .t{
+    display: none;
+}
+
+
+/* Responsive for Cards  */
+/* For mobile screen  */
+@media only screen and (min-width: 320px) and (max-width: 481px){
+    body{
+        height: 286vh;
+    }
+    .cards{
+        display: flex;
+        flex-direction: column;
+        margin-left: -56px;
+        margin-top: 35px;
+
+    }
+    .hvrbox img {
+      height: 80vh;
+      margin: 3px 72px;
+    }
+    .hvrbox .hvrbox-layer_top {
+        width: 81%;
+        height: 98%;
+        top: 3px;
+        left: 69px;
+    } 
+    .hvrbox .hvrbox-text{
+        top: 9%;
+        left: 11%;
+    }
+    .hvrbox .hvrbox-button {
+        left: 34%;
+    }
+    .hvrbox .hvr-text {
+        top: 72%;
+        left: 27%;
+    }
+    .hvrbox .hvr-desp{
+        top: 88%;
+        left: 25%;
+    }
+  
+}
+ /* Responsive for cards  */
+ /* For Tablet Screen  */
+@media only screen and (min-width: 482px) and (max-width: 678px){
+    body{
+        height: 283vh;
+    }
+    .cards{
+        display: block;
+        margin-top: 41px;
+    }
+    .hvrbox img {
+        max-width: 80%;
+        height: 80vh;
+        margin: 4px 40px;
+    }
+    .hvrbox .hvrbox-layer_top {
+        opacity: 0;
+        position: absolute;
+        top: 4px;
+        left: 40px;
+        right: 0;
+        width: 80%;
+        height: 98%;
+        background: rgba(0, 0, 0, 0.6);
+        color: #fff;
+    }
+    .hvrbox .hvrbox-text{
+        top: 9%;
+        left: 9%;
+    }
+  
+}
+
+/* Responsive for card  */
+/* For laptop Screen  */
+@media only screen and (min-width: 679px) and (max-width: 1024px){
+    .hvrbox .hvrbox-layer_top {
+        height: 91%;
+    } 
+    .hvrbox .hvrbox-button {
+        left: 44%;
+    }
+    .hvrbox .hvr-text {
+        top: 72%;
+        left: 22%;
+    }
+    .hvrbox .hvrbox-text2 {
+        font-size: 26px;
+    }
+    .hvrbox .hvr-desp{
+        top: 83%;
+        left: 23%;
+    }
+}
+
+/* styling for footer section  */
+footer{
+    text-align: center;
+    /* margin-top: 63px; */
+    position: relative;
+}
+.para{
+    color: white;
+    position: absolute;
+    /* position: fixed; */
+    left: 3%;
+    top: 58%;
+
+}
+.map img{
+    width: 3%;
+    height: 3%;
+    border-radius: 50%;
+    background-color: gray;
+    padding: 5px 10px;
+}
+
+/* responsive for footer */
+/* for mobile screen  */
+@media only screen and (min-width: 320px) and (max-width: 481px){
+    .para{
+        left: 5%;
+    }
+}
+
+/* responsive for footer */
+/* for tablet screen  */
+@media only screen and (min-width: 482px) and (max-width: 678px){
+    .map{
+        padding: 13px 17px;
+    }
+}
+
+/* 
+.nav-icon {
+    margin: 1em;
+    width: 20px;
+  } */
+  
+  /* .nav-icon:after, 
+  .nav-icon:before, 
+  .nav-icon div {
+    background-color: #fff;
+    border-radius: 3px;
+    content: '';
+    display: block;
+    height: 5px;
+    margin: 3px 0;
+    transition: all .2s ease-in-out;
+  }
+  .nav-icon:hover:before {
+    transform: translateY(-4px) rotate(125deg);
+
+  }
+  
+  .nav-icon:hover:after {
+    transform: translateY(-12px) rotate(-135deg);
+  }
+  
+  .nav-icon:hover div {
+    transform: scale(0);
+  } */
