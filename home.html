@@ -33,8 +33,17 @@
                 <li>
                     <a class="chapters" href="chapter.html">VIEW CHAPTERS</a>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="chapter.html"><i class="nav-icon fas fa-bars"></i></a>
+                </li> -->
+                <li>
+
+                    <div class="container" onmousemove="myFunction(this)">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+
                 </li>
             </ul>
         </div>
@@ -98,7 +107,17 @@
         </div>
     </footer>
 
-    <script src="home.js"></script>
+    <script>
+        function myFunction(x) {
+            x.classList.toggle("change");
+        }
+
+        let chapter = document.querySelector(".container");
+        chapter.onclick = () => {
+            window.location.href = "chapter.html";
+        }
+    </script>
+
 </body>
 
 </html>
